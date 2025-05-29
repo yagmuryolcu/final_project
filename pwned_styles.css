@@ -1,0 +1,167 @@
+/* HaveIBeenPwned Entegrasyonu için CSS - Dark Mode Mor Tema */
+
+/* Genel Arka Plan ve Yazı */
+body {
+    background-color: #1e1e2f;
+    color: #dcd6f7;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Yükleniyor göstergesi */
+.loading {
+    padding: 15px;
+    text-align: center;
+    color: #9b59b6; /* mor */
+    background-color: #2e2a44;
+    border-radius: 4px;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border: 3px solid #3c3a55;
+    border-top: 3px solid #9b59b6;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* HIBP Sonuç Stilleri */
+#pwned-result {
+    margin-top: 20px;
+}
+
+/* Şifre bulunursa */
+.pwned-found {
+    padding: 15px;
+    background-color: #4b284b;
+    border-left: 4px solid #bb29bb;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.pwned-found h4 {
+    color: #d47fd4;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* Şifre güvenli ise */
+.pwned-safe {
+    padding: 15px;
+    background-color: #2b3a2b;
+    border-left: 4px solid #7f5abb;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.pwned-safe h4 {
+    color: #a38fd3;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* Hata mesajları */
+.pwned-error {
+    padding: 15px;
+    background-color: #4a3b26;
+    border-left: 4px solid #d18b2b;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.pwned-error h4 {
+    color: #e0b54a;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* Şifre Gücü Göstergesi Geliştirmeleri */
+.strength-indicator {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.strength-indicator-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #3c3a55;
+    margin-right: 5px;
+    transition: background-color 0.3s;
+}
+
+.strength-indicator-dot.active {
+    background-color: currentColor;
+}
+
+/* Mor tonlarını şifre gücüne göre kullanabiliriz */
+.strength-indicator-dot.active:nth-child(1) { color: #8e44ad; } /* zayıf */
+.strength-indicator-dot.active:nth-child(2) { color: #9b59b6; } /* orta */
+.strength-indicator-dot.active:nth-child(3) { color: #bb29bb; } /* güçlü */
+
+/* Kriter kutucukları */
+.strength-criteria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.criteria-item {
+    flex: 1;
+    min-width: 120px;
+    padding: 10px;
+    background-color: #2e2a44;
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: center;
+    color: #b4a9d6;
+    border-left: 3px solid #6c63a7;
+}
+
+.criteria-item.met {
+    background-color: #4b3a74;
+    color: #d9cef2;
+    border-left-color: #bb29bb;
+}
+
+/* Şifre Gücü Detayları */
+#strength-details li {
+    padding: 5px 0;
+    color: #c5b8e5;
+}
+
+#strength-details li::before {
+    content: "•";
+    color: #9b59b6;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* Geri Bildirim İyileştirmeleri */
+.feedback-positive {
+    color: #bb29bb;
+}
+
+.feedback-negative {
+    color: #d472bb;
+}
+
+.feedback-neutral {
+    color: #9277b8;
+}

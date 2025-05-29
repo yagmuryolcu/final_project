@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body {
+    background-color: #2c2c2c;  
+    color: #ffffff; 
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Header */
+header {
+    display: flex;
+    flex-direction: row; /* Yatay düzen */
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1a1a1a;
+    padding: 20px 30px;
+    height: 100px; /* Sabit yükseklik verildi */
+    flex-wrap: wrap; /* Ekran küçülürse satır atlar */
+  }
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #663fd2;
+    margin: 0;
+}
+
+
+header p {
+    font-size: 14px;
+    color: #663fd2;
+    margin: 0;
+}
+
+/* Arama kutusu */
+.search-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.search-box {
+    padding: 8px;
+    border: 1px solid #663fd2;
+    border-radius: 5px;
+    outline: none;
+    width: 400px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.search-button {
+    padding: 8px;
+    background-color: #663fd2;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: #502da8;
+}
+
+/* Menü */
+nav ul {
+    list-style-type: none;
+    padding: 10px;
+    text-align: center;
+    background: #1a1a1a;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #502da8;;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Ana kısım */
+main {
+    flex: 1;
+    text-align: center;
+    padding: 50px;
+    min-height: auto;
+}
+
+/* WHY US SECTION */
+.why-us {
+    text-align: center;
+    padding: 60px 20px;
+    background: transparent;
+    margin-top: 20px; /* Başlık ile kartlar arasında mesafe  */
+
+}
+.why-us h3 {
+    margin-bottom: 40px; /* Başlık ile kartlar arasında daha fazla mesafe */
+    animation: fadeIn 2s ease-in-out forwards; /* 2 saniyede beliren animasyon */
+
+}
+
+
+/* KART KONTEYNERİ */
+.why-us-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.why-us-block {
+    background: rgba(255, 255, 255, 0.05); /* Daha ince arka plan */
+    padding: 25px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Yumuşak gölge */
+    width: 280px;
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid rgba(0, 195, 255, 0.2);
+}
+
+
+/* KART BAŞLIKLARI */
+.why-us-block h4 {
+    font-size: 1.8rem;
+    color: #00c3ff;
+    margin-bottom: 10px;
+}
+
+/* KART METNİ */
+.why-us-block p {
+    font-size: 1rem;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* HOVER EFEKTİ */
+.why-us-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 195, 255, 0.5);
+}
+
+/* HERO BÖLÜMÜ */
+.hero-section {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero-section h2 {
+    font-size: 2.5em;
+    color: #ffcc00;
+    
+    animation: fadeIn 2s ease-in-out forwards; /* 2 saniyede beliren animasyon */
+}
+
+.hero-section .tagline {
+    font-size: 1.4em;
+    color: #ffffff;
+    animation: fadeIn 2s ease-in-out forwards; /* 2 saniyede beliren animasyon */
+
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #00c3ff;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 8px;
+    transition: background 0.3s;
+    animation: fadeIn 2s ease-in-out forwards; /* 2 saniyede beliren animasyon */
+
+}
+
+.cta-button:hover {
+    background-color: #009acd;
+}
+
+/* Animasyon tanımı */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Hafifçe aşağıdan gelsin */
+        
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+/* PARTİCLES.JS ARKA PLAN AYARLARI */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}

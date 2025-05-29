@@ -1,0 +1,261 @@
+/* Şifre Güvenliği Sayfası için CSS - Dark Mode Mor Tema */
+
+/* Ana konteyner */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1e1e2f;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(155, 89, 182, 0.5);
+    color: #dcd6f7;
+}
+
+h1 {
+    text-align: center;
+    color: #bb29bb;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #9b59b6;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #bb29bb;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Sekme Stilleri */
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #4b3a74;
+}
+
+.tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #b4a9d6;
+    transition: all 0.3s;
+}
+
+.tab:hover {
+    color: #bb29bb;
+}
+
+.tab.active {
+    color: #bb29bb;
+    border-bottom: 3px solid #bb29bb;
+}
+
+/* Sekme İçerik Alanı */
+.tab-content {
+    padding: 20px;
+    background-color: #2e2a44;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(155, 89, 182, 0.3);
+    color: #dcd6f7;
+}
+
+.tab-content.hidden {
+    display: none;
+}
+
+/* Form Grupları */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #b4a9d6;
+}
+
+.password-input {
+    position: relative;
+    display: flex;
+}
+
+.password-input input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #4b3a74;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #1e1e2f;
+    color: #dcd6f7;
+}
+
+.password-input input::placeholder {
+    color: #9b59b6;
+}
+
+.password-input button {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #bb29bb;
+    transition: color 0.3s;
+}
+
+.password-input button:hover {
+    color: #d87dd8;
+}
+
+.copy-password {
+    margin-left: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #bb29bb;
+    transition: color 0.3s;
+}
+
+.copy-password:hover {
+    color: #d87dd8;
+}
+
+/* Checkbox Grupları */
+.checkbox-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+}
+
+.form-check input {
+    margin-right: 8px;
+    accent-color: #bb29bb; /* mor checkbox */
+}
+
+/* Şifre Gücü Göstergesi */
+.strength-meter {
+    height: 8px;
+    background-color: #4b3a74;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.strength-bar {
+    height: 100%;
+    width: 0;
+    background-color: #bb29bb; /* mor ton */
+    transition: width 0.3s, background-color 0.3s;
+}
+
+.strength-text {
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #dcd6f7;
+}
+
+.strength-value {
+    font-weight: 600;
+    color: #dcd6f7;
+}
+
+/* Butonlar */
+.form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s;
+    color: #dcd6f7;
+}
+
+.btn.primary {
+    background-color: #bb29bb;
+}
+
+.btn.primary:hover {
+    background-color: #9b1dbb;
+}
+
+.btn:not(.primary) {
+    background-color: #4b3a74;
+}
+
+.btn:not(.primary):hover {
+    background-color: #6e4b8a;
+}
+
+/* Analiz Sonuçları */
+.analysis-results {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #2e2a44;
+    border-radius: 4px;
+    color: #dcd6f7;
+}
+
+.analysis-results h3 {
+    margin-top: 0;
+    color: #bb29bb;
+}
+
+.analysis-results ul {
+    padding-left: 20px;
+}
+
+.analysis-results li {
+    margin-bottom: 5px;
+}
+
+/* İpuçları Bölümü */
+.tips-section {
+    line-height: 1.6;
+    color: #c9b9e9;
+}
+
+.tips-section ul {
+    padding-left: 20px;
+}
+
+.tips-section li {
+    margin-bottom: 8px;
+}
+
+/* Duyarlı Tasarım */
+@media (max-width: 768px) {
+    .checkbox-group {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+}
